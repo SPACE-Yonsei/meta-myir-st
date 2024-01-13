@@ -15,9 +15,10 @@ LINUX_TARNAME = "linux-${LINUX_VERSION}.${LINUX_SUBVERSION}"
 
 SRC_URI[kernel.sha256sum] = "da47d9a80b694548835ccb553b6eb1a1f3f5d5cddd9e2bd6f4886b99ca14f940"
 
-SRC_URI = "git://github.com/MYiR-Dev/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV = "9cec825a70d75e79b7ca295b0931e81dbb441bd7"
-SRCBRANCH = "develop-yf13x-L5.15"
+
+SRC_URI = "git://github.com/SPACE-Yonsei/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV = "${AUTOREV}"
+SRCBRANCH = "altair-binary"
 
 
 
@@ -40,8 +41,8 @@ S = "${WORKDIR}/git"
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI:class-devupstream = "git://github.com/MYiR-Dev/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV:class-devupstream = "9cec825a70d75e79b7ca295b0931e81dbb441bd7"
+SRC_URI:class-devupstream = "git://github.com/SPACE-Yonsei/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV:class-devupstream = "${AUTOREV}"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github

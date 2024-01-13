@@ -2,9 +2,10 @@ SUMMARY = "OPTEE TA development kit for myir"
 LICENSE = "BSD-2-Clause & BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=c1f21c4f72f372ef38a5a4aee55ec173"
 
-SRC_URI = "git://github.com/MYiR-Dev/myir-st-optee_os.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV = "f44b6e4c9874d3c13a9155bc4393a48614dd6778"
-SRCBRANCH = "develop-yf13x-v3.16"
+
+SRC_URI = "git://github.com/SPACE-Yonsei/myir-st-optee_os.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV = "${AUTOREV}"
+SRCBRANCH = "altair"
 
 
 OPTEE_VERSION = "3.16.0"
@@ -43,8 +44,8 @@ include ${@oe.utils.ifelse(d.getVar('ST_ARCHIVER_ENABLE') == '1', 'optee-os-myir
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI:class-devupstream = "git://github.com/MYiR-Dev/myir-st-optee_os.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV:class-devupstream = "f44b6e4c9874d3c13a9155bc4393a48614dd6778"
+SRC_URI:class-devupstream = "git://github.com/SPACE-Yonsei/myir-st-optee_os.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV:class-devupstream = "${AUTOREV}"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github

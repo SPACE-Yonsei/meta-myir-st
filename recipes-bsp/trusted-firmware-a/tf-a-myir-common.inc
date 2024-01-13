@@ -8,9 +8,9 @@ LIC_FILES_CHKSUM = "file://license.rst;md5=1dd070c98a281d18d9eefd938729b031"
 #SRC_URI = "git://github.com:myir-private/myir-st-tfa.git;protocol=https;branch=develop-v2.6-stm32mp"
 #SRCREV = "4cc966a5372b13517343009b2f8797cb99828ce8"
 
-SRC_URI = "git://github.com/MYiR-Dev/myir-st-arm-trusted-firmware.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV = "4cc966a5372b13517343009b2f8797cb99828ce8"
-SRCBRANCH = "develop-yf13x-v2.6"
+SRC_URI = "git://github.com/SPACE-Yonsei/myir-st-arm-trusted-firmware.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV = "${AUTOREV}"
+SRCBRANCH = "altair"
 
 
 
@@ -31,8 +31,8 @@ S = "${WORKDIR}/git"
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI:class-devupstream = "git://github.com/MYiR-Dev/myir-st-arm-trusted-firmware.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV:class-devupstream = "4cc966a5372b13517343009b2f8797cb99828ce8"
+SRC_URI:class-devupstream = "git://github.com/SPACE-Yonsei/myir-st-arm-trusted-firmware.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV:class-devupstream = "${AUTOREV}"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github

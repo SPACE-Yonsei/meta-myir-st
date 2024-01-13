@@ -12,9 +12,10 @@ DEPENDS += "python3-setuptools-native"
 
 COMPATIBLE_MACHINE = "(stm32mpcommon)"
 
-SRC_URI = "git://github.com/MYiR-Dev/myir-st-u-boot.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV  = "7e709a983f0816e63e8c13387d66f01225f01848"
-SRCBRANCH = "develop-yf13x-v2021.10"
+
+SRC_URI = "git://git@github.com/SPACE-Yonsei/myir-st-u-boot.git;protocol=ssh;branch=${SRCBRANCH}"
+SRCREV  = "${AUTOREV}"
+SRCBRANCH = "altair"
 
 
 
@@ -37,8 +38,8 @@ S = "${WORKDIR}/git"
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI:class-devupstream = "git://github.com/MYiR-Dev/myir-st-u-boot.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV:class-devupstream = "7e709a983f0816e63e8c13387d66f01225f01848"
+SRC_URI:class-devupstream = "git://git@github.com/SPACE-Yonsei/myir-st-u-boot.git;protocol=ssh;branch=${SRCBRANCH}"
+SRCREV:class-devupstream = "${AUTOREV}"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github
