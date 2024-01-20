@@ -546,6 +546,7 @@ UBOOT_CONFIG[trusted_stm32mp15] = "stm32mp15_defconfig,,u-boot.dtb"
 UBOOT_CONFIG[trusted_stm32mp13] = "stm32mp13_defconfig,,u-boot.dtb"
 UBOOT_CONFIG[myir_emmc_stm32mp13] = "myc_stm32mp13_512m_defconfig,,u-boot.dtb"
 UBOOT_CONFIG[myir_nand_stm32mp13] = "myc_stm32mp13_256m_defconfig,,u-boot.dtb"
+UBOOT_CONFIG[altair] = "stm32mp13_altair_defconfig,,u-boot.dtb"
 
 # List of U-Boot device tree to use
 UBOOT_DEVICETREE = "${STM32MP_DEVICETREE}"
