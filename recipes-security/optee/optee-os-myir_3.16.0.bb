@@ -58,6 +58,3 @@ SRCREV:class-devupstream = "${AUTOREV}"
 STM32MP_SOURCE_SELECTION ?= "tarball"
 
 DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
-
-# Enable Debug Logs
-ST_OPTEE_DEBUG_LOG_LEVEL = "4"
