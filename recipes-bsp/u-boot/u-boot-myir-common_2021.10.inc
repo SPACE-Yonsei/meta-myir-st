@@ -15,7 +15,7 @@ COMPATIBLE_MACHINE = "(stm32mpcommon)"
 
 SRC_URI = "git://git@github.com/SPACE-Yonsei/myir-st-u-boot.git;protocol=ssh;branch=${SRCBRANCH}"
 SRCREV  = "${AUTOREV}"
-SRCBRANCH = "altair"
+SRCBRANCH = "altair-develop"
 
 
 

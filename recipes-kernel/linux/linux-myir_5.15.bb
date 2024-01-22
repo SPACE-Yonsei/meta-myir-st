@@ -18,8 +18,7 @@ SRC_URI[kernel.sha256sum] = "da47d9a80b694548835ccb553b6eb1a1f3f5d5cddd9e2bd6f48
 
 SRC_URI = "git://github.com/SPACE-Yonsei/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
 SRCREV = "${AUTOREV}"
-SRCBRANCH = "altair-binary"
-
+SRCBRANCH = "altair-develop"
 
 
 LINUX_TARGET = "myir"

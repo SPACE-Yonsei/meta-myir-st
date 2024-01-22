@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=c1f21c4f72f372ef38a5a4aee55ec173"
 
 SRC_URI = "git://git@github.com/SPACE-Yonsei/myir-st-optee_os.git;protocol=ssh;branch=${SRCBRANCH}"
 SRCREV = "${AUTOREV}"
-SRCBRANCH = "altair"
+SRCBRANCH = "altair-develop"
 
 
 OPTEE_VERSION = "3.16.0"
@@ -58,3 +58,5 @@ SRCREV:class-devupstream = "${AUTOREV}"
 STM32MP_SOURCE_SELECTION ?= "tarball"
 
 DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+
+ST_OPTEE_DEBUG_LOG_LEVEL = "4"

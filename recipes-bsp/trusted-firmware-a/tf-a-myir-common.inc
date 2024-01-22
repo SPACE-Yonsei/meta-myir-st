@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://license.rst;md5=1dd070c98a281d18d9eefd938729b031"
 
 SRC_URI = "git://github.com/SPACE-Yonsei/myir-st-arm-trusted-firmware.git;protocol=https;branch=${SRCBRANCH}"
 SRCREV = "${AUTOREV}"
-SRCBRANCH = "altair"
+SRCBRANCH = "altair-develop"
 
 
 
