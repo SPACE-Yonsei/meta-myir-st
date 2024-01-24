@@ -15,10 +15,10 @@ LINUX_TARNAME = "linux-${LINUX_VERSION}.${LINUX_SUBVERSION}"
 
 SRC_URI[kernel.sha256sum] = "da47d9a80b694548835ccb553b6eb1a1f3f5d5cddd9e2bd6f4886b99ca14f940"
 
-SRC_URI = "git://github.com/MYiR-Dev/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV = "9cec825a70d75e79b7ca295b0931e81dbb441bd7"
-SRCBRANCH = "develop-yf13x-L5.15"
 
+SRC_URI = "git://github.com/SPACE-Yonsei/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV = "${AUTOREV}"
+SRCBRANCH = "altair-develop"
 
 
 LINUX_TARGET = "myir"
@@ -40,8 +40,8 @@ S = "${WORKDIR}/git"
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI:class-devupstream = "git://github.com/MYiR-Dev/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
-SRCREV:class-devupstream = "9cec825a70d75e79b7ca295b0931e81dbb441bd7"
+SRC_URI:class-devupstream = "git://github.com/SPACE-Yonsei/myir-st-linux.git;protocol=https;branch=${SRCBRANCH}"
+SRCREV:class-devupstream = "${AUTOREV}"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github
@@ -58,7 +58,7 @@ include ${@oe.utils.ifelse(d.getVar('ST_ARCHIVER_ENABLE') == '1', 'linux-myir-ar
 # -------------------------------------------------------------
 # Defconfig
 #
-KERNEL_DEFCONFIG        = "myir_stm32mp135x_defconfig"
+KERNEL_DEFCONFIG        = "stm32mp135d_altair_mx_defconfig"
 KERNEL_CONFIG_FRAGMENTS = "${@bb.utils.contains('KERNEL_DEFCONFIG', 'defconfig', '${S}/arch/arm/configs/fragment-01-multiv7_cleanup.config', '', d)}"
 KERNEL_CONFIG_FRAGMENTS += "${@bb.utils.contains('KERNEL_DEFCONFIG', 'defconfig', '${S}/arch/arm/configs/fragment-02-multiv7_addons.config', '', d)}"
 KERNEL_CONFIG_FRAGMENTS += "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', '${WORKDIR}/fragments/${LINUX_VERSION}/fragment-03-systemd.config', '', d)} "

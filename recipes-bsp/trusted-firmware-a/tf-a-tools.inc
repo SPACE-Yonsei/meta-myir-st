@@ -3,7 +3,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/tf-a-tools:"
 #SRC_URI = "git://github.com/myir-private/myir-st-tfa.git;protocol=https;branch=develop-v2.6-stm32mp"
 #SRCREV = "4cc966a5372b13517343009b2f8797cb99828ce8"
 
-SRC_URI = "git://github.com/MYiR-Dev/myir-st-arm-trusted-firmware.git;protocol=https;branch=${SRCBRANCH}"
+SRC_URI = "git://git@github.com/SPACE-Yonsei/myir-st-arm-trusted-firmware;protocol=ssh;branch=${SRCBRANCH}"
 SRCREV = "4cc966a5372b13517343009b2f8797cb99828ce8"
 SRCBRANCH = "develop-yf13x-v2.6"
 
