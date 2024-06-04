@@ -6,4 +6,5 @@ Available images for OpenSTLinux layers are:
   - Other OpenSTLinux images:
       - Supported images:
           myir-image-core         -   OpenSTLinux core image
+          myir-image-core-dev     -   OpenSTLinux core image with Debug Packages
 
